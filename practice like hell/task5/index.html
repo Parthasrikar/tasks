@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        .tab {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 20px;
+            background-color: #7efde8e6;
+            border: 5px solid #7eddef56;
+        }
+        h3 {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">HOME</div>
+    <div class="tab">ABOUT</div>
+    <div class="tab">CONTACT</div>
+
+    <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores consequuntur nulla, iusto debitis corrupti delectus deleniti sapiente nobis officiis nihil voluptatem natus suscipit repellat molestias, id eaque. Iste similique error quas consequuntur. Minus cum molestias nesciunt quis dignissimos natus, aliquam rem fugiat quaerat. Tempora, commodi? Sunt, dolores reiciendis ducimus adipisci facilis facere fugit repellat ad laborum recusandae obcaecati earum esse aliquid unde odio nam ab voluptatum iusto nostrum possimus cum. Maiores, quae facere in officiis atque saepe quia, iure illo harum reprehenderit illum laboriosam! Aspernatur voluptatem magni ipsam doloremque, quo pariatur neque voluptates asperiores reiciendis laborum deleniti quis facilis, eius voluptatum similique recusandae repellendus eveniet hic delectus incidunt nostrum. Laboriosam repudiandae nobis omnis dicta deleniti laudantium blanditiis est cumque? Sit voluptatum eos velit et maiores aliquid cum commodi consequuntur dignissimos tenetur mollitia, debitis, nesciunt est nisi excepturi illum perferendis alias accusantium molestiae corrupti. Delectus quaerat fugit rerum nisi modi, atque in unde est? Corporis exercitationem fugit adipisci sit labore eum eius sapiente veritatis obcaecati recusandae? Fugiat explicabo beatae perspiciatis sequi saepe eum harum delectus est. Velit facere quas animi neque, non sit fugit, minus, officiis perspiciatis suscipit voluptatum magni voluptates necessitatibus! Labore vel est alias ipsa minima assumenda! Harum dicta adipisci, earum, consequuntur nihil aperiam odit architecto eligendi nisi, soluta perspiciatis vel cum quibusdam exercitationem ad delectus? Beatae minima inventore, eius autem ipsam accusamus odio exercitationem mollitia possimus at omnis cum assumenda blanditiis quisquam saepe atque corrupti commodi cumque incidunt! Amet, facilis fugiat fugit impedit dolores labore accusamus omnis dignissimos.</h3>
+
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nobis iusto suscipit velit quo cum in, blanditiis alias repellendus ab voluptatibus adipisci vitae accusamus fugit qui quibusdam est sapiente ea itaque? Accusantium beatae enim delectus iure, nostrum sapiente eos provident recusandae aperiam at obcaecati labore excepturi dolorum autem. Odit recusandae et quidem ipsa, voluptatem earum quo vero alias aspernatur ab magnam. Ipsam obcaecati, repellendus alias voluptatum perspiciatis dolorem! Modi ipsum tempore, dolorem mollitia nobis hic quidem quos sequi tempora quaerat deserunt vitae facere error totam iste officiis qui repudiandae ullam nesciunt atque ex corrupti! Hic inventore cupiditate eligendi iure esse quasi blanditiis necessitatibus reiciendis corrupti quae voluptate deserunt at magni aliquid nesciunt, laboriosam dolorem exercitationem laborum suscipit accusamus beatae quam temporibus eaque. Reiciendis ratione sint odio, tempore est consequuntur a? Reprehenderit quos eaque vel recusandae minima. Porro itaque voluptate a dolor ipsum ullam distinctio quasi enim officiis voluptas. Impedit cupiditate veritatis delectus laborum expedita enim porro tempora dignissimos quaerat necessitatibus ab, nam quia obcaecati reprehenderit nulla numquam tenetur tempore, adipisci mollitia itaque! Velit quod nemo aut sed odit natus harum.</h3>
+
+    <h3>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero tempora, quae illo consequuntur commodi distinctio corrupti itaque est qui minima facilis necessitatibus ullam error quod ipsa! Sint voluptatem assumenda ad nesciunt qui a unde similique asperiores vitae delectus accusamus, reiciendis corrupti porro distinctio obcaecati nobis? Culpa eum porro, deleniti perferendis necessitatibus ab labore sequi quae alias voluptatem nesciunt tempore at maiores est vero sunt natus qui similique tempora. Quas, expedita!</h3>
+
+    <script>
+        var divs = document.querySelectorAll(".tab");
+        var texts = document.querySelectorAll("h3");
+
+        texts[0].style.display = "block"
+
+        divs.forEach((div,index)=>{
+            div.addEventListener("click", ()=> {
+                hide();
+                texts[index].style.display = "block";
+            })
+        })
+
+        function hide() {
+            texts.forEach((text)=>{
+                text.style.display= "none";
+            })
+        }
+    </script>
+</body>
+</html>

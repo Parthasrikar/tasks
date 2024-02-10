@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            gap: 50px;
+        }
+        input {
+            padding: 10px 40px;
+            border-radius: 5px;
+            border: 2px solid #00000072;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 23px;
+            color: #00000072;
+        }
+        button {
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: 2px solid #00000072;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 23px;
+            color: #00000072;
+        }
+        h3 {
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h3></h3>
+    <form>
+        <input type="text">
+        <input type="email">
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        var form = document.querySelector("form");
+        var inp = document.querySelectorAll("input");
+        var submit = document.querySelector("button");
+        var h3 = document.querySelector("h3");
+
+        form.addEventListener("submit",(evt)=>{
+            evt.preventDefault();
+
+            for(var i=0; i<inp.length; i++) {
+                if(inp[i].value.trim() === "") {
+                    h3.textContent = "ERROR some feilds are blank";
+                    console.log("caught");
+                    h3.style.color = "red";
+                    break;
+                }
+                else {
+                    h3.textContent = ""
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>
